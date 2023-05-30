@@ -1,4 +1,5 @@
 import React from 'react'
+import {FaPlay} from 'react-icons/fa'
 
 function Words({result}) {
     const {word, phonetics, meanings} = result;
@@ -19,7 +20,8 @@ console.log({e});
             <p className='px-2'>{meanings[0].partOfSpeech}</p>
             <p className='px-2'>{phonetics[0].text}</p>
             <div >
-            <p onClick={playAudio} className='bg-sky-500 text-white p-1'>
+            <p onClick={playAudio} className='bg-sky-500 text-white p-1 flex cursor-pointer'>
+              <FaPlay className='mt-1 pr-1'/>
                 {""}
                 play audio{""}
             </p>

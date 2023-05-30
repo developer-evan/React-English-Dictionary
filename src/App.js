@@ -25,11 +25,12 @@ function App() {
 
   return (
     <div className="bg-slate-950 text-white items-start  p-8">
-      <div className="flex mt-2 pt-5  ml-10">
-      <input  className="bg-sky-500" value={keyword} onChange={(e) => setKeyword(e.target.value)}  />
+      <h2>English Dictionary:</h2>
+      <div className="flex mt-2 pt-5  ">
+      <input  className="bg-sky-500 border-none w-2/5 p-1 mr-3" value={keyword} onChange={(e) => setKeyword(e.target.value)}  />
      <div > 
       <button
-        className="text-sky-500 "
+        className="text-white  bg-sky-500 p-1 mr-3"
         type="submit"
         onClick={handleSearch}
         value="search"
@@ -38,7 +39,7 @@ function App() {
       </button>
       <button
         disabled={!result}
-        className="bg-red"
+        className="bg-red-500 text-white p-1"
         type="submit"
         onClick={handleClear}
       >
